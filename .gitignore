@@ -1,0 +1,39 @@
+# Maven target directory
+/target/
+
+# IDE directories and files
+/.idea/
+/*.iml
+/.project
+/.classpath
+/.settings/
+/.vscode/
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Spring Boot devtools directory
+/.devtools/
+
+# Maven wrapper files
+.mvn/
+!mvnw
+!mvnw.cmd
+
+# Node/NPM if applicable (if you have frontend code in your project)
+node_modules/
+
+# Generated files (if using Lombok)
+/*.class
+
+# Compiled Java binaries
+*.class
+*.jar
+*.war
+*.ear
+
