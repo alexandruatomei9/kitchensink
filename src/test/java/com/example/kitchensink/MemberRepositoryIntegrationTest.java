@@ -15,10 +15,11 @@ public class MemberRepositoryIntegrationTest {
     private MemberRepository memberRepository;
 
     @Test
-    public void testFindByEmail() {
+    public void shouldFindMemberByEmail() {
         Member member = new Member();
         member.setEmail("john@example.com");
         member.setName("John Doe");
+        member.setPhoneNumber("0123456789");
         memberRepository.save(member);
 
         Member found = memberRepository.findByEmail("john@example.com");
