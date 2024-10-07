@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-@Scope("application")
 public interface MemberRepository extends JpaRepository<Member, Long> {
 
     Member findByEmail(String email);
