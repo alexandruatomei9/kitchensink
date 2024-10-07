@@ -12,7 +12,8 @@ import java.io.Serializable;
 public class Member implements Serializable {
 
     @Id
-    @GeneratedValue
+    @Getter
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Getter

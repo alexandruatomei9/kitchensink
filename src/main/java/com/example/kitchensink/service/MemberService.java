@@ -14,10 +14,13 @@ public class MemberService {
     @Autowired
     private MemberRepository memberRepository;
 
-    public void register(Member member) throws Exception {
-        //log.info("Registering " + member.getName());
-        //em.persist(member);
+    public void register(Member member) {
+        memberRepository.save(member);
         //memberEventSrc.fire(member);
+    }
+
+    public List<Member> findAll() {
+        return memberRepository.findAll();
     }
 
     public List<Member> findAllOrderedByName() {
