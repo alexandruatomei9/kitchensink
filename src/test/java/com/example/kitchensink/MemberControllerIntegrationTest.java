@@ -61,7 +61,7 @@ public class MemberControllerIntegrationTest {
 
     @Test
     public void shouldFindNoMembersInitially() throws Exception {
-        mockMvc.perform(get("/members/all"))
+        mockMvc.perform(get("/members"))
                 .andExpect(status().isOk())
                 .andExpect(content().json("[]"));
     }
@@ -80,7 +80,7 @@ public class MemberControllerIntegrationTest {
         secondMember.setPhoneNumber("9876543210");
         memberRepository.save(secondMember);
 
-        mockMvc.perform(get("/members/all"))
+        mockMvc.perform(get("/members"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$", hasSize(2)))
