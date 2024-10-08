@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-//@RestController is not working because there is a method returning a view
 @Controller
 @RequestMapping("/members")
 public class MemberController {
@@ -24,7 +23,7 @@ public class MemberController {
     private MemberService memberService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<Member> getMemberById(@PathVariable Long id) {
+    public ResponseEntity<Member> getMemberById(@PathVariable String id) {
         Optional<Member> member = memberService.findById(id);
         return member.map(value -> new ResponseEntity<>(value, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }

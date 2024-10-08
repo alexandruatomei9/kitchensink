@@ -31,7 +31,7 @@ public class MemberService {
         return Optional.of(memberRepository.findByEmail(email));
     }
 
-    public Optional<Member> findById(Long id) {
+    public Optional<Member> findById(String id) {
         return memberRepository.findById(id);
     }
 }

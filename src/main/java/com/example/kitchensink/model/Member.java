@@ -1,20 +1,20 @@
 package com.example.kitchensink.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
 
-@Entity
-@Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+@Document(collection = "members")
 public class Member implements Serializable {
 
     @Id
     @Getter
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
     @Getter
     @Setter
