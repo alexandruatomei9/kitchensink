@@ -15,7 +15,7 @@ If Java 21 is not installed, please install it, then proceed with the next steps
 
 1. Clone the repository using the command below:
 ```bash
-git clone <repository-url>
+git clone git@github.com:alexandruatomei9/kitchensink.git
 ````
 
 2. **Navigate to the Project Directory**: Once the project is transferred, open a terminal and navigate to the root directory of the project (where **mvnw** and **pom.xml** are located):
