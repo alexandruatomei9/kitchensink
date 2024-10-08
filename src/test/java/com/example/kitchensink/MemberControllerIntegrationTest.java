@@ -52,7 +52,7 @@ public class MemberControllerIntegrationTest {
         member.setPhoneNumber("0123456789");
         memberRepository.save(member);
 
-        mockMvc.perform(get("/members/1"))
+        mockMvc.perform(get("/members/" + member.getId()))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.email").value("jane@example.com"))
                 .andExpect(jsonPath("$.name").value("Jane Doe"))
