@@ -20,11 +20,6 @@ Thumbs.db
 # Spring Boot devtools directory
 /.devtools/
 
-# Maven wrapper files
-.mvn/
-!mvnw
-!mvnw.cmd
-
 # Node/NPM if applicable (if you have frontend code in your project)
 node_modules/
 
